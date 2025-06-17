@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>เมนูเครื่องดื่ม | My POS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .badges {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 5px;
+    }
+    .badge {
+      background: #e74c3c;
+      color: white;
+      font-size: 0.7em;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .badge.linepay { background: #2ecc71; }
+    .badge.promo { background: #f39c12; }
+    .badge.sponsored { background: #34495e; }
+    .info {
+      padding: 10px;
+    }
+    .info h3 {
+      margin: 0 0 5px;
+    }
+    .meta {
+      font-size: 0.85em;
+      color: #666;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+    .price {
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍹 เมนูเครื่องดื่ม</h1>
+    <a href="cart.html">🛒 ตะกร้า (<span id="cart-count">0</span>)</a>
+  </header>
+
+  <div class="card-grid">
+    <!-- เมนู 1 -->
+    <div class="card">
+      <div style="position:relative">
+        <img src="assets/greentea.jpg" alt="ชาเขียวมัจฉะ" />
+        <div class="badges">
+          <span class="badge">Delivery 10฿</span>
+          <span class="badge linepay">LINEPAY</span>
+          <span class="badge promo">Promo</span>
+        </div>
+      </div>
+      <div class="info">
+        <h3>ชาเขียวมัจฉะ</h3>
+        <div class="meta">
+          <span>📍 1.5km</span>
+          <span>⏱ 35min</span>
+          <span>⭐ 4.5</span>
+        </div>
+        <div class="price">75 บาท</div>
+        <button onclick="addToCart(1)">เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+
+    <!-- เมนู 2 -->
+    <div class="card">
+      <div style="position:relative">
+        <img src="assets/milktea.jpg" alt="ชานมไข่มุก" />
+        <div class="badges">
+          <span class="badge promo">ลดราคา</span>
+        </div>
+      </div>
+      <div class="info">
+        <h3>ชานมไข่มุก</h3>
+        <div class="meta">
+          <span>📍 2km</span>
+          <span>⏱ 30min</span>
+          <span>⭐ 4.7</span>
+        </div>
+        <div class="price">60 บาท</div>
+        <button onclick="addToCart(2)">เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+
+    <!-- เมนู 3 -->
+    <div class="card">
+      <div style="position:relative">
+        <img src="assets/lemontea.jpg" alt="ชามะนาว" />
+      </div>
+      <div class="info">
+        <h3>ชามะนาว</h3>
+        <div class="meta">
+          <span>📍 1.2km</span>
+          <span>⏱ 20min</span>
+          <span>⭐ 4.3</span>
+        </div>
+        <div class="price">50 บาท</div>
+        <button onclick="addToCart(3)">เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+
+    <!-- เมนู 4 -->
+    <div class="card">
+      <div style="position:relative">
+        <img src="assets/mocha.jpg" alt="มอคค่าเย็น" />
+        <div class="badges">
+          <span class="badge sponsored">Sponsored</span>
+        </div>
+      </div>
+      <div class="info">
+        <h3>มอคค่าเย็น</h3>
+        <div class="meta">
+          <span>📍 2.5km</span>
+          <span>⏱ 40min</span>
+          <span>⭐ 4.6</span>
+        </div>
+        <div class="price">80 บาท</div>
+        <button onclick="addToCart(4)">เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

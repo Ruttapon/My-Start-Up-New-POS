@@ -1,58 +1,20 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ร้านเครื่องดื่ม</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-200 font-sans">
-  <div class="max-w-md mx-auto bg-white rounded-lg p-4 mt-6">
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/7667/7667875.png" alt="logo" class="w-10 h-10">
-      <h1 class="text-xl font-bold">ชื่อร้านค้า</h1>
-      <button>
-        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" class="w-8 h-8">
-      </button>
-    </div>
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
 
-    <!-- Categories -->
-    <div class="flex justify-between gap-2 mb-4">
-      <button class="bg-gray-100 px-4 py-1 rounded-full text-sm">เครื่องดื่ม</button>
-      <button class="bg-gray-100 px-4 py-1 rounded-full text-sm">ขนมหวาน</button>
-      <button class="bg-gray-100 px-4 py-1 rounded-full text-sm">อาหาร</button>
-      <button class="bg-gray-100 px-4 py-1 rounded-full text-sm">ของว่าง</button>
-    </div>
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
-    <!-- Menu Items -->
-    <div class="grid grid-cols-2 gap-4">
-      <!-- Item 1 -->
-      <div class="bg-gray-50 rounded-xl p-2">
-        <p class="text-sm mb-1">ชาเขียวมัจฉะ</p>
-        <img src="https://i.imgur.com/F4aJ7Xw.jpg" class="rounded-lg mb-1">
-        <p class="text-right font-semibold text-sm">75 บ.</p>
-      </div>
-      <!-- Item 2 -->
-      <div class="bg-gray-50 rounded-xl p-2">
-        <p class="text-sm mb-1">ชาไทย</p>
-        <img src="https://i.imgur.com/Atq2y1S.jpg" class="rounded-lg mb-1">
-        <p class="text-right font-semibold text-sm">75 บ.</p>
-      </div>
-      <!-- Item 3 -->
-      <div class="bg-gray-50 rounded-xl p-2">
-        <p class="text-sm mb-1">กาแฟ</p>
-        <img src="https://i.imgur.com/F4aJ7Xw.jpg" class="rounded-lg mb-1">
-        <p class="text-right font-semibold text-sm">75 บ.</p>
-      </div>
-      <!-- Item 4 -->
-      <div class="bg-gray-50 rounded-xl p-2">
-        <p class="text-sm mb-1">ชาเขียวมัจฉะ</p>
-        <img src="https://i.imgur.com/Atq2y1S.jpg" class="rounded-lg mb-1">
-        <p class="text-right font-semibold text-sm">75 บ.</p>
-      </div>
-      <!-- Add more items as needed -->
-    </div>
-  </div>
-</body>
-</html>    <!--55555556-->
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #fff;
+  width: 200px;
+}
+
