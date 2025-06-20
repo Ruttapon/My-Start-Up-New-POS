@@ -1,51 +1,60 @@
-
-body {
-  font-family: sans-serif;
-  background: #f5f5f5;
-  padding: 20px;
-  margin: 0;
+body {/*ลักษณะทั่วไปของหน้าเว็บ*/
+  font-family: sans-serif;          /* ใช้ฟอนต์แบบไม่มีหัว (อ่านง่าย, ทันสมัย) */
+  background: #f5f5f5;              /* สีพื้นหลังของหน้าเว็บเป็นสีเทาอ่อน */
+  padding: 20px;                    /* ระยะห่างขอบรอบนอกของเนื้อหาทั้งหมด */
+  margin: 0;                        /* ยกเลิกระยะห่างรอบๆ ที่ browser ให้มา */
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #dff9fb;
-  padding: 30px 20px;
-  border-radius: 10px;
-}
 
-.category {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.card-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-}
-
-.card {
-  background: #e0f7fa;
-  padding: 10px;
-  border-radius: 10px;
+.header {  /*ส่วนหัวของหน้า เช่นชื่อร้าน */
+  display: flex;                    /* จัดวางเนื้อหาใน header แบบแนวนอน */
+  justify-content: space-between;  /* เว้นช่องว่างระหว่างสองฝั่งซ้าย-ขวา */
+  align-items: center;             /* จัดให้เนื้อหาตรงกลางในแนวตั้ง */
   text-align: center;
+  background: #767879;             /* สีพื้นหลังเทาเข้ม */
+  padding: 1024px 1024px;              /* ด้านบน-ล่าง 1024px, ซ้าย-ขวา 1024px */
+  border-radius: 10px;             /* มุมกล่องมน 10px */
 }
 
-.detail-card, .cart {
-  background: #e0f7fa;
-  padding: 20px;
-  border-radius: 15px;
+
+.category {  /*แถบหมวดหมู่ อาหาร*/
+  display: flex;                   /* เรียงปุ่มหมวดหมู่ในแนวนอน */
+  gap: 20px;                       /* ระยะห่างระหว่างปุ่มแต่ละอัน */
+  margin: 20px 0;                  /* ระยะห่างบน-ล่าง 20px */
 }
 
-.detail-card img, .card img {
-  width: 100%;
-  border-radius: 10px;
+
+.card-grid {  /*กล่องแสดงเมนูหลายอัน*/
+  display: grid;                                      /* แสดงรายการเป็นตาราง */
+  gap: 10px;                                          /* ช่องว่างระหว่างแต่ละการ์ด */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* สร้างคอลัมน์อัตโนมัติ โดยให้แต่ละคอลัมน์กว้างอย่างน้อย 50px */
+  /* และขยายเท่าที่เหลือในแถว (1fr = 1 ส่วนของพื้นที่ที่เหลือ) */
 }
 
-.total {
-  margin-top: 10px;
-  font-weight: bold;
+.card {   /*กล่องแสดงสินค้าทีละอัน*/
+  background: #767879;              /* สีพื้นหลังฟ้าสดใส */
+  padding: 10px;                    /* ระยะห่างรอบในของเนื้อหา */
+  border-radius: 10px;              /* มุมกล่องมน 10px */
+  text-align: center;               /* จัดข้อความให้อยู่กึ่งกลางแนวนอน */
+}
+
+
+.detail-card, .cart {/*กล่องแสดงสินค้าในตะกล้า*/
+  background: #767879;              /* สีพื้นหลังเทาเข้ม */
+  padding: 20px;                    /* ระยะห่างในกล่อง */
+  border-radius: 15px;              /* มุมมน 15px */
+}
+
+
+.detail-card img, .card img {/*รูปภาพในสินค้าและรายละเอียด*/
+  width: 25%;                       /* ขนาดกว้างของภาพ = 25% ของ container */
+  border-radius: 10px;              /* มุมภาพโค้งมน */
+  text-align: center;               /* จัดให้อยู่กึ่งกลาง (ไม่ได้มีผลกับ <img> มาก) */
+}
+
+
+.total {/*ส่วนแสดงรวมในตะกร้าสินค้า*/
+  margin-top: 10px;                 /* เว้นช่องด้านบน */
+  font-weight: bold;                /* ตัวหนา */
 }
